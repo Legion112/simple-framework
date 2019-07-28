@@ -1,0 +1,10 @@
+{
+    "name": "max/php-working-with-forms",
+    "authors": [
+        {
+            "name": "max112",
+            "email": "ma@modertoken.com"
+        }
+    ],
+    "require": {}
+}
