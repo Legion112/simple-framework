@@ -1,8 +1,6 @@
 ***Installation***
 
-1 run 
-
-`composer install`
+1 `composer install`
 
 2 cd public 
 
