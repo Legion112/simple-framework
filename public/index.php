@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php'; // see
+require '../vendor/autoload.php'; /** @see https://mega.nz/#!BjZDTAwL!dcGixjZWbAVweXMeMprrUzMzb3hNC35AIGgxt2El1uo */
 
 $uri = $_SERVER['REQUEST_URI'];
 

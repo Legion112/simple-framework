@@ -19,7 +19,6 @@ class SiteController
 
     public function contact()
     {
-        $_SERVER['REQUEST_METHOD'];
         echo require '../views/site/contact.php';
     }
 }
