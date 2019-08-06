@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Form\CreateBookForm;
+
 class BookController
 {
     public function create()
@@ -12,7 +14,9 @@ class BookController
          */
         $request = $serviceLocator->get(Services::REQUEST);
         if ($request->isPost()) {
-            var_dump($request->post());
+            $form = new CreateBookForm();
+            $form->name = $request->post('name');
+            // TODO validate and show errors
         } else {
             return require '../views/book/create.php';
         }
