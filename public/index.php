@@ -9,4 +9,4 @@ list($classController, $methodName) = $router->getControllerNameAndMethod($uri);
 
 $controller = new $classController;
 
-$controller->$methodName();
+echo $controller->$methodName();

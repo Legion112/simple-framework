@@ -37,12 +37,19 @@
 <div class="container" style="margin-top:30px">
     <div class="row">
         <div class="col-sm-12">
-            <h1>This is main page</h1>
+            <h1>Add a new book</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <a href="/book/add-new-book" class="btn btn-primary">Add a new book</a>
+            <form method="post">
+                <div class="form-group">
+                    <label for="bookName">Book name</label>
+                    <input type="text" name="name" class="form-control" id="bookName" placeholder="Book name">
+                    <small class="form-text text-muted">Type book name</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
 </div>
