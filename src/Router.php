@@ -15,11 +15,17 @@ class Router
     }
 
     /**
+     * @param string $uri
      * @return array
      * [App/SiteController, 'main']
      */
     public function getControllerNameAndMethod(string $uri):array
     {
-        return $this->config[$uri];
+        $pos = strpos($uri, '?');
+        $path = $uri;
+        if ($pos !== false) {
+            $path = substr($uri, 0, $pos);
+        }
+        return $this->config[$path];
     }
 }

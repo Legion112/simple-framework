@@ -11,3 +11,10 @@ $serviceLocator->register(Services::PDO, static function () use ($config) {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ]);
 });
+
+$routes = require '../config/routs.php';
+
+$serviceLocator->register(Services::ROUTER, static function () use ($routes) {
+    return new \App\Router($routes);
+});
+

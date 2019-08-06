@@ -6,24 +6,25 @@ class BookController
 {
     public function create()
     {
+        $serviceLocator = ServiceLocator::getInstance();
         /**
-         * @var  $request
-         * @todo don't create here get via dependency
+         * @var  $request Request
          */
-        $request = new Request();
+        $request = $serviceLocator->get(Services::REQUEST);
         if ($request->isPost()) {
-            /**
-             * @todo validate (show errors if there are any), save, and redirect to (book/view?id=12334)
-             */
-            var_dump($_POST);
-            die;
+            var_dump($request->post());
+        } else {
+            return require '../views/book/create.php';
         }
-        return require '../views/book/create.php';
     }
 
 
     public function view()
     {
-        die('View created book');
+        $serviceLocator = ServiceLocator::getInstance();
+        /** @var Request $request */
+        $request = $serviceLocator->get(Services::REQUEST);
+        $id = $request->get('id');
+        die("New book id is $id");
     }
 }
